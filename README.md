@@ -109,3 +109,23 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+# Local Development
+
+```bash
+# Launch
+multipass launch -n azure-python-apm --cloud-init cloud-config.yaml
+
+# Bind the local directory into the instance
+multipass mount . azure-python-apm:/code
+
+# Access instance
+multipass shell azure-python-apm
+
+# Run the app
+python3 app.py
+
+# Delete when done
+multipass delete azure-python-apm
+multipass purge
+```
