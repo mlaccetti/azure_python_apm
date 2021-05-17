@@ -12,6 +12,11 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                           'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
+@app.route('/loaderio-3d1957b238811e416b0f0ea56a56f163.txt')
+def loaderio():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                          'loaderio-3d1957b238811e416b0f0ea56a56f163.txt',mimetype='text/plain')
+
 @app.route("/")
 def home():
     
